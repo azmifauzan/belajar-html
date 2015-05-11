@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Membuat Garis dalam Kanvas</title>
+</head>
+<body>
+<canvas id="kanvas" width="200" height="200" style="border:1px solid #e2e2e2;">
+Browser tidak mendukung canvas.</canvas>
+<script>
+var c = document.getElementById("kanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(200,200);
+ctx.stroke();
+</script>
+</body>
+</html>

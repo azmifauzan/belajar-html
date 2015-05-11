@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Layout HTML</title>
+        <style type="text/css">
+            body {
+                width: 960px;
+            }
+            #header, #menu, #sidebar, #footer, #konten {
+                background: cyan;
+                border: 1px solid white;
+                color: black;
+                font-size: 30px;
+                text-align: center;
+            }
+            #header, #menu, #footer {
+                width: 100%;
+            }
+            #header, #footer {
+                height: 100px;
+            }
+            #menu {
+                height: 50px;
+            }
+            #sidebar {
+                float: left;
+                height: 250px;
+                width: 29.5%;
+            }
+            #konten {
+                float: right;
+                height: 250px;
+                width: 70%;
+            }
+            #footer {
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">Header</div>
+        <div id="menu">Menu</div>
+        <div id="sidebar">Sidebar</div> 
+		<div id="konten">Konten</div>
+        <div id="footer">Footer</div>
+    </body>
+</html>

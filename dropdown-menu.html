@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dropdown Menu</title>
+	<style>
+	li ul {
+		visibility: hidden;
+		opacity: 0;
+		z-index: 1;
+		-webkit-transition: all .25s ease;
+		-moz-transition: all .25s ease;
+		-ms-transition: all .25s ease;
+		-o-transition: all .25s ease;
+		transition: all .25s ease;
+	}
+	li:hover ul {
+		opacity: 1;
+		visibility: visible;
+	}
+	li ul li {
+		float: none;
+		width: 100%;
+	}
+
+	ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li{
+		float:left;
+		height: 150px;
+		width: 13%;
+		min-width: 150px;
+	}
+
+	li a{
+		text-align: center;
+		text-decoration: none;
+		color: #fff;
+	}
+
+	a:hover{
+		color:#000;
+	}
+
+	#icon-home{
+		display: block;
+		background: blue;
+		background-image:url(home.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 25px;
+		padding-top: 125px;
+	}
+
+	a:hover #icon-home{
+		background-image:url(home-hitam.png);
+	}
+
+	#icon-menu{
+		display: block;
+		background: red;
+		background-image:url(menu.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 25px;
+		padding-top: 125px;
+	}
+
+	a:hover #icon-menu{
+		background-image:url(menu-hitam.png);
+	}
+
+	#sub-icon{
+		display: block;
+		background: yellow;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 20px;
+		padding: 15px;
+		border-top: 1px solid #CED021;
+	}
+
+	a:hover #sub-icon{
+		background: #CED021;
+	}
+	</style>
+</head>
+
+<body> 
+    <ul>
+        <li>
+            <a  href="#" title="">
+                <span id="icon-home">Home</span>
+            </a>
+        </li>
+        <li>
+            <a  href="#" title="">
+                <span  id="icon-menu">Menu</span>
+            </a>
+            <ul>
+                <li>
+                    <a  href="#" title="">
+                        <span  id="sub-icon">subMenu 1</span>
+                    </a>
+                    <a  href="#" title="">
+                        <span  id="sub-icon">subMenu 2</span>
+                    </a>
+                    <a  href="#" title="">
+                        <span  id="sub-icon">subMenu 3</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

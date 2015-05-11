@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Menggambar Teks dalam Kanvas</title>
+</head>
+<body>
+	<canvas id="kanvas" width="600" height="200" style="border:1px solid #d3d3d3;">Browser tidak mendukung kanvas.</canvas>
+	<script>
+		canvas = document.getElementById("kanvas");
+		context = canvas.getContext("2d");
+		context.font = "80px Comic Sans MS";
+		context.fillStyle = "blue";
+		context.textAlign = "center";
+		context.fillText("Selamat Datang", canvas.width/2, canvas.height/2);
+	</script>
+</body>
+</html>

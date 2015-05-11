@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo">Klik tombol dibawah ini.</p>
+<button onclick="getLocation()">Ambil Geolokasi</button>
+<div id="mapholder"></div>
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        x.innerHTML = "Geolocation belum didukung oleh browser Anda.";
+    }
+}
+
+function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+    var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=14&size=400x300&sensor=false";
+    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "Akses geolokasi ditolak oleh pengguna."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Informasi lokasi tidak tersedia."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "Permintaan informasi geolokasi terlalu lama."
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "Error tidak diketahui."
+            break;
+    }
+}
+</script>
+</body>
+</html>
